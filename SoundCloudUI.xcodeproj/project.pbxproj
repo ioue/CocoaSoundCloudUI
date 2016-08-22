@@ -769,7 +769,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = "../**";
+				HEADER_SEARCH_PATHS = (
+					"../OHAttributedLabel/**",
+					"../OAuth2Client/**",
+					"../CocoaSoundCloudAPI/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SoundCloudUI;
@@ -784,7 +788,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = "../**";
+				HEADER_SEARCH_PATHS = (
+					"../OHAttributedLabel/**",
+					"../OAuth2Client/**",
+					"../CocoaSoundCloudAPI/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SoundCloudUI;
