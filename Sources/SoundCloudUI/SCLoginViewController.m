@@ -44,6 +44,7 @@
 #pragma mark Accessors
 @property (nonatomic, retain) NSURL *preparedURL;
 @property (nonatomic, assign) SCLoginView *loginView;
+@property (nonatomic, assign) SCConnectToSoundCloudTitleView *scTitleView;
 @property (nonatomic, copy) SCLoginViewControllerCompletionHandler completionHandler;
 
 #pragma mark Notifications
@@ -123,10 +124,14 @@
     self.loginView = [[[SCLoginView alloc] initWithFrame:self.view.bounds] autorelease];
     self.loginView.loginDelegate = self;
     self.loginView.delegate = self;
-    self.loginView.contentSize = CGSizeMake(1.0, CGRectGetHeight(self.loginView.bounds));
+    self.loginView.contentSize = CGSizeMake(1, 480);
     [self.loginView removeAllCookies];
     [self.view addSubview:self.loginView];
-    
+
+    SCConnectToSoundCloudTitleView *scTitleView = [[[SCConnectToSoundCloudTitleView alloc] initWithFrame:[self titleFrame]] autorelease];
+    [self.view addSubview:scTitleView];
+    _scTitleView = scTitleView;
+
     // Navigation Bar
     self.navigationController.navigationBarHidden = YES;
 }
@@ -134,16 +139,6 @@
 - (void)viewWillAppear:(BOOL)animated;
 {
     [super viewWillAppear:animated];
-    SCConnectToSoundCloudTitleView *scTitleView = [[[SCConnectToSoundCloudTitleView alloc] initWithFrame:CGRectMake(0,
-                                                                                                                    0,
-                                                                                                                    CGRectGetWidth(self.view.bounds),
-                                                                                                                    44.0)] autorelease];
-
-    [self.view addSubview:scTitleView];
-    self.loginView.frame = CGRectMake(0,
-                                      scTitleView.frame.size.height,
-                                      CGRectGetWidth(self.view.bounds),
-                                      CGRectGetHeight(self.view.bounds) - scTitleView.frame.size.height);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
@@ -153,6 +148,37 @@
     }
 
     return UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+
+    _scTitleView.frame = [self titleFrame];
+    self.loginView.frame = [self loginViewFrame];
+}
+
+- (CGRect)titleFrame
+{
+    const CGRect bounds = [self safeArea];
+    return CGRectMake(CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetWidth(bounds), 44.0);
+}
+
+- (CGRect)loginViewFrame
+{
+    const CGRect bounds = [self safeArea];
+    const CGRect rect = [self titleFrame];
+    return CGRectMake(CGRectGetMinX(bounds), CGRectGetMaxY(rect), CGRectGetWidth(bounds), CGRectGetMaxY(bounds) - CGRectGetMaxY(rect));
+}
+
+- (CGRect)safeArea
+{
+#if ((TARGET_OS_SIMULATOR || TARGET_OS_IPHONE || TARGET_OS_TV) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= 110000))  //  iOS11
+    if (@available(iOS 11.0, *)) {
+        return UIEdgeInsetsInsetRect(self.view.bounds, self.view.safeAreaInsets);
+    }
+#endif
+    return self.view.bounds;
 }
 
 #pragma mark Notifications

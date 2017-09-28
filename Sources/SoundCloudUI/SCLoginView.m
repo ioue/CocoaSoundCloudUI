@@ -313,7 +313,7 @@
     
     self.titleLabel.frame = CGRectMake(titleLabelX,
                                        titleLabelY,
-                                       self.bounds.size.width - self.frame.origin.x,
+                                       CGRectGetMaxX(self.bounds) - titleLabelX,
                                        titleLabelHeight);
     
     self.credentialsView.frame = CGRectMake(13.0,
