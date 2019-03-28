@@ -54,9 +54,6 @@
 		F6EF8CD613F92CF900B20B40 /* SCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF8C9C13F92CF900B20B40 /* SCBundle.m */; };
 		F6EF8CD713F92CF900B20B40 /* SCCoverImageButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F6EF8C9D13F92CF900B20B40 /* SCCoverImageButton.h */; };
 		F6EF8CD813F92CF900B20B40 /* SCCoverImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF8C9E13F92CF900B20B40 /* SCCoverImageButton.m */; };
-		F6EF8CD913F92CF900B20B40 /* SCFoursquarePlacePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = F6EF8C9F13F92CF900B20B40 /* SCFoursquarePlacePickerController.h */; };
-		F6EF8CDA13F92CF900B20B40 /* SCFoursquarePlacePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF8CA013F92CF900B20B40 /* SCFoursquarePlacePickerController.m */; };
-		F6EF8CDB13F92CF900B20B40 /* SCFoursquarePlacePickerControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F6EF8CA113F92CF900B20B40 /* SCFoursquarePlacePickerControllerDelegate.h */; };
 		F6EF8CDC13F92CF900B20B40 /* SCHorizontalLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = F6EF8CA213F92CF900B20B40 /* SCHorizontalLineView.h */; };
 		F6EF8CDD13F92CF900B20B40 /* SCHorizontalLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF8CA313F92CF900B20B40 /* SCHorizontalLineView.m */; };
 		F6EF8CDE13F92CF900B20B40 /* SCLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = F6EF8CA413F92CF900B20B40 /* SCLoginView.h */; };
@@ -134,9 +131,6 @@
 		F6EF8C9C13F92CF900B20B40 /* SCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBundle.m; sourceTree = "<group>"; };
 		F6EF8C9D13F92CF900B20B40 /* SCCoverImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCoverImageButton.h; sourceTree = "<group>"; };
 		F6EF8C9E13F92CF900B20B40 /* SCCoverImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCCoverImageButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		F6EF8C9F13F92CF900B20B40 /* SCFoursquarePlacePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFoursquarePlacePickerController.h; sourceTree = "<group>"; };
-		F6EF8CA013F92CF900B20B40 /* SCFoursquarePlacePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCFoursquarePlacePickerController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		F6EF8CA113F92CF900B20B40 /* SCFoursquarePlacePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFoursquarePlacePickerControllerDelegate.h; sourceTree = "<group>"; };
 		F6EF8CA213F92CF900B20B40 /* SCHorizontalLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHorizontalLineView.h; sourceTree = "<group>"; };
 		F6EF8CA313F92CF900B20B40 /* SCHorizontalLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHorizontalLineView.m; sourceTree = "<group>"; };
 		F6EF8CA413F92CF900B20B40 /* SCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginView.h; sourceTree = "<group>"; };
@@ -314,9 +308,6 @@
 		F678272013F930EA00CACABE /* Foursquare */ = {
 			isa = PBXGroup;
 			children = (
-				F6EF8C9F13F92CF900B20B40 /* SCFoursquarePlacePickerController.h */,
-				F6EF8CA013F92CF900B20B40 /* SCFoursquarePlacePickerController.m */,
-				F6EF8CA113F92CF900B20B40 /* SCFoursquarePlacePickerControllerDelegate.h */,
 			);
 			name = Foursquare;
 			sourceTree = "<group>";
@@ -464,8 +455,6 @@
 				F6EF8CD213F92CF900B20B40 /* SCAddConnectionViewControllerDelegate.h in Headers */,
 				F6EF8CD513F92CF900B20B40 /* SCBundle.h in Headers */,
 				F6EF8CD713F92CF900B20B40 /* SCCoverImageButton.h in Headers */,
-				F6EF8CD913F92CF900B20B40 /* SCFoursquarePlacePickerController.h in Headers */,
-				F6EF8CDB13F92CF900B20B40 /* SCFoursquarePlacePickerControllerDelegate.h in Headers */,
 				F6EF8CDC13F92CF900B20B40 /* SCHorizontalLineView.h in Headers */,
 				F6EF8CDE13F92CF900B20B40 /* SCLoginView.h in Headers */,
 				F6EF8CE013F92CF900B20B40 /* SCLoginViewController.h in Headers */,
@@ -591,7 +580,6 @@
 				F6EF8CD113F92CF900B20B40 /* SCAddConnectionViewController.m in Sources */,
 				F6EF8CD613F92CF900B20B40 /* SCBundle.m in Sources */,
 				F6EF8CD813F92CF900B20B40 /* SCCoverImageButton.m in Sources */,
-				F6EF8CDA13F92CF900B20B40 /* SCFoursquarePlacePickerController.m in Sources */,
 				F6EF8CDD13F92CF900B20B40 /* SCHorizontalLineView.m in Sources */,
 				F6EF8CDF13F92CF900B20B40 /* SCLoginView.m in Sources */,
 				F6EF8CE313F92CF900B20B40 /* SCNameAndEmailCell.m in Sources */,
