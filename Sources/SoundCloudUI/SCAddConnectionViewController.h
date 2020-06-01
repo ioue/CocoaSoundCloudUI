@@ -19,19 +19,20 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <WebKit/WebKit.h>
 
 #import "SCAddConnectionViewControllerDelegate.h"
 
 @class SCAccount;
 
-@interface SCAddConnectionViewController : UIViewController <UIWebViewDelegate> {
+@interface SCAddConnectionViewController : UIViewController {
     
     id<SCAddConnectionViewControllerDelegate> delegate;
     
     SCAccount *account;
     NSString *service;
     NSURL *authorizeURL;
-    UIWebView *webView;
+    WKWebView *webView;
     
     BOOL loading;
 }

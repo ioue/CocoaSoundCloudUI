@@ -34,11 +34,11 @@
 #import "SCUIErrors.h"
 
 #import "SCLoginViewController.h"
-
+#import <WebKit/WebKit.h>
 
 #pragma mark -
 
-@interface SCLoginViewController () <UIScrollViewDelegate, SCLoginViewProtocol>
+@interface SCLoginViewController () <UIScrollViewDelegate, SCLoginViewProtocol, WKNavigationDelegate>
 - (id)initWithPreparedURL:(NSURL *)anURL completionHandler:(SCLoginViewControllerCompletionHandler)aCompletionHandler;
 
 #pragma mark Accessors

@@ -21,7 +21,7 @@
 
 typedef void(^SCLoginViewControllerCompletionHandler)(NSError *error);
 
-@interface SCLoginViewController : UIViewController <UIWebViewDelegate>
+@interface SCLoginViewController : UIViewController
 + (SCLoginViewController *)loginViewControllerWithPreparedURL:(NSURL *)anURL
                                             completionHandler:(SCLoginViewControllerCompletionHandler)aCompletionHandler;
 @end
